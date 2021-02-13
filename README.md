@@ -16,3 +16,5 @@ Here's a <a href =
 
 Contact me at mackenziealyce@gmail.com
 Github: https://github.com/KenzieAlyce
+
+License: <a href = license.txt>MIT</a>
