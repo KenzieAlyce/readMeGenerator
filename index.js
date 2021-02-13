@@ -1,5 +1,3 @@
-// TODO: Include packages needed for this application
-
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
@@ -9,33 +7,48 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = [ {
     type: 'input',
     name: 'title',
-    message: 'Project Title?',
+    message: 'What is your project title?',
   },
   {
     type: 'input',
-    name: 'place',
-    message: 'Where are you from?',
+    name: 'description',
+    message: 'Enter a description of your project',
   },
   {
     type: 'input',
-    name: 'hobby',
-    message: 'What is your favorite hobby?',
+    name: 'instructions',
+    message: 'Include instructions for using your project',
   },
   {
     type: 'input',
-    name: 'food',
-    message: 'What is your favorite food?',
+    name: 'media',
+    message: 'Include images or videos of your completed project',
   },
   {
     type: 'input',
     name: 'github',
-    message: 'Enter your GitHub Username',
+    message: 'Enter your GitHub profile',
   },
   {
     type: 'input',
-    name: 'linkedin',
-    message: 'Enter your LinkedIn URL.',
-  }];
+    name: 'email',
+    message: 'Enter your email address',
+  },
+  {
+    type: 'list',
+    name: 'license',
+    message: "Please choose the license for the project:",
+    // Resource: https://choosealicense.com/licenses/
+    choices: [
+        "GNU GPLv3",
+        "Mozilla Public License 2.0",
+        "Apache License 2.0",
+        "MIT License",
+        "Boost Software License 1.0",
+        "The Unlicense",
+        "BSD 3-Clause"
+    ]
+  },];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
